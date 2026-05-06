@@ -1,23 +1,23 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: swiggy-app
+  name: secretsanta-generator-app
   labels:
-    app: swiggy-app
+    app: secretsanta-generator-app
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: swiggy-app
+      app: secretsanta-generator-app
   template:
     metadata:
       labels:
-        app: swiggy-app
+        app: secretsanta-generator-app
     spec:
       terminationGracePeriodSeconds: 30
       containers:
-      - name: swiggy-app
-        image: ghc18081998/swiggy:latest
+      - name: secretsanta-generator-app
+        image: ghc18081998/secretsanta-generator:1254
         imagePullPolicy: "Always"
         ports:
         - containerPort: 3000
