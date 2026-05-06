@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: secretsanta-generator-app
-  namespace: santa
+  namespace: santa-prod
   labels:
     app: secretsanta-generator-app
 spec:
